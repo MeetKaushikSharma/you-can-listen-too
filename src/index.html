@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOU CAN LISTEN TOO :)</title>
+    <script type="module" src="/main.js" defer></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="app-title">YOU CAN LISTEN TOO</h1>
+      <div id="system-status" class="status-badge">● SYSTEM OFFLINE</div>
+    </header>
+    <hr class="header-line" />
+    <main class="app-content">
+      <!-- Left Panel: Source and Action -->
+      <section class="left-panel">
+        <div class="control-box border-box">
+          <h2 class="box-title">00. INPUT SOURCE</h2>
+          <label for="loopback-select">CAPTURE SOURCE (WASAPI):</label>
+          <select id="loopback-select" class="mono-select">
+            <option disabled selected>[SELECT SOURCE]</option>
+          </select>
+        </div>
+        
+        <div class="control-box border-box">
+          <h2 class="box-title">01. ENGINE SWITCH</h2>
+          <button id="toggle-routing-btn" class="mono-btn btn-large">START ROUTING</button>
+          <button id="refresh-devices-btn" class="mono-btn">REFRESH DEVICES</button>
+        </div>
+
+        <div class="instructions-box">
+          <h3>INSTRUCTIONS:</h3>
+          <p>1. Connect all headphones via Bluetooth or USB.</p>
+          <p>2. (Recommended) Set default Windows output to a virtual audio cable (e.g. VB-Cable).</p>
+          <p>3. Select that loopback source in 00. INPUT SOURCE.</p>
+          <p>4. Enable receivers on the right and select their output devices.</p>
+          <p>5. Click START ROUTING.</p>
+          <p>6. Adjust delays to line up audio synchronization.</p>
+        </div>
+      </section>
+
+      <!-- Right Panel: Receivers -->
+      <section class="right-panel">
+        <div class="receivers-container">
+          <div class="receiver-slot border-box" data-id="0">
+            <div class="slot-header">
+              <label class="checkbox-container">
+                <input type="checkbox" class="receiver-enable" />
+                <span class="custom-checkbox"></span>
+                RECEIVER 01
+              </label>
+              <span class="receiver-status">OFFLINE</span>
+            </div>
+            <div class="slot-controls">
+              <div class="control-group device-group">
+                <label>OUTPUT DEVICE</label>
+                <select class="receiver-device mono-select">
+                  <option disabled selected>[SELECT DEVICE]</option>
+                </select>
+              </div>
+              <div class="control-group slider-group">
+                <label class="delay-val">DELAY: 0ms</label>
+                <input type="range" min="0" max="500" value="0" class="receiver-delay mono-slider" />
+              </div>
+              <div class="control-group slider-group">
+                <label class="vol-val">VOL: 100%</label>
+                <input type="range" min="0" max="100" value="100" class="receiver-volume mono-slider" />
+              </div>
+              <button class="mono-btn receiver-mute-btn">MUTE</button>
+            </div>
+          </div>
+
+          <div class="receiver-slot border-box" data-id="1">
+            <div class="slot-header">
+              <label class="checkbox-container">
+                <input type="checkbox" class="receiver-enable" />
+                <span class="custom-checkbox"></span>
+                RECEIVER 02
+              </label>
+              <span class="receiver-status">OFFLINE</span>
+            </div>
+            <div class="slot-controls">
+              <div class="control-group device-group">
+                <label>OUTPUT DEVICE</label>
+                <select class="receiver-device mono-select">
+                  <option disabled selected>[SELECT DEVICE]</option>
+                </select>
+              </div>
+              <div class="control-group slider-group">
+                <label class="delay-val">DELAY: 0ms</label>
+                <input type="range" min="0" max="500" value="0" class="receiver-delay mono-slider" />
+              </div>
+              <div class="control-group slider-group">
+                <label class="vol-val">VOL: 100%</label>
+                <input type="range" min="0" max="100" value="100" class="receiver-volume mono-slider" />
+              </div>
+              <button class="mono-btn receiver-mute-btn">MUTE</button>
+            </div>
+          </div>
+
+          <div class="receiver-slot border-box" data-id="2">
+            <div class="slot-header">
+              <label class="checkbox-container">
+                <input type="checkbox" class="receiver-enable" />
+                <span class="custom-checkbox"></span>
+                RECEIVER 03
+              </label>
+              <span class="receiver-status">OFFLINE</span>
+            </div>
+            <div class="slot-controls">
+              <div class="control-group device-group">
+                <label>OUTPUT DEVICE</label>
+                <select class="receiver-device mono-select">
+                  <option disabled selected>[SELECT DEVICE]</option>
+                </select>
+              </div>
+              <div class="control-group slider-group">
+                <label class="delay-val">DELAY: 0ms</label>
+                <input type="range" min="0" max="500" value="0" class="receiver-delay mono-slider" />
+              </div>
+              <div class="control-group slider-group">
+                <label class="vol-val">VOL: 100%</label>
+                <input type="range" min="0" max="100" value="100" class="receiver-volume mono-slider" />
+              </div>
+              <button class="mono-btn receiver-mute-btn">MUTE</button>
+            </div>
+          </div>
+
+          <div class="receiver-slot border-box" data-id="3">
+            <div class="slot-header">
+              <label class="checkbox-container">
+                <input type="checkbox" class="receiver-enable" />
+                <span class="custom-checkbox"></span>
+                RECEIVER 04
+              </label>
+              <span class="receiver-status">OFFLINE</span>
+            </div>
+            <div class="slot-controls">
+              <div class="control-group device-group">
+                <label>OUTPUT DEVICE</label>
+                <select class="receiver-device mono-select">
+                  <option disabled selected>[SELECT DEVICE]</option>
+                </select>
+              </div>
+              <div class="control-group slider-group">
+                <label class="delay-val">DELAY: 0ms</label>
+                <input type="range" min="0" max="500" value="0" class="receiver-delay mono-slider" />
+              </div>
+              <div class="control-group slider-group">
+                <label class="vol-val">VOL: 100%</label>
+                <input type="range" min="0" max="100" value="100" class="receiver-volume mono-slider" />
+              </div>
+              <button class="mono-btn receiver-mute-btn">MUTE</button>
+            </div>
+          </div>
+
+          <div class="receiver-slot border-box" data-id="4">
+            <div class="slot-header">
+              <label class="checkbox-container">
+                <input type="checkbox" class="receiver-enable" />
+                <span class="custom-checkbox"></span>
+                RECEIVER 05
+              </label>
+              <span class="receiver-status">OFFLINE</span>
+            </div>
+            <div class="slot-controls">
+              <div class="control-group device-group">
+                <label>OUTPUT DEVICE</label>
+                <select class="receiver-device mono-select">
+                  <option disabled selected>[SELECT DEVICE]</option>
+                </select>
+              </div>
+              <div class="control-group slider-group">
+                <label class="delay-val">DELAY: 0ms</label>
+                <input type="range" min="0" max="500" value="0" class="receiver-delay mono-slider" />
+              </div>
+              <div class="control-group slider-group">
+                <label class="vol-val">VOL: 100%</label>
+                <input type="range" min="0" max="100" value="100" class="receiver-volume mono-slider" />
+              </div>
+              <button class="mono-btn receiver-mute-btn">MUTE</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

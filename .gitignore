@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Tauri / Cargo Builds
+src-tauri/target/
+src-tauri/gen/schemas/
+src-tauri/Cargo.lock
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# IDE / Editor Settings
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
