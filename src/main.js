@@ -51,6 +51,21 @@ function setupEventListeners() {
   refreshBtn.addEventListener("click", refreshDevices);
   toggleBtn.addEventListener("click", toggleRouting);
 
+  // Setup credit link event listener to open LinkedIn url in external browser
+  const creditsLink = document.getElementById("credits-link");
+  if (creditsLink) {
+    creditsLink.addEventListener("click", async (e) => {
+      e.preventDefault();
+      try {
+        if (window.__TAURI__ && window.__TAURI__.opener) {
+          await window.__TAURI__.opener.openUrl("https://www.linkedin.com/in/meetkaushiksharma/");
+        }
+      } catch (err) {
+        console.error("Failed to open URL:", err);
+      }
+    });
+  }
+
   // Setup event listeners for each receiver slot
   slots.forEach((slot) => {
     slot.enableChk.addEventListener("change", (e) => {

@@ -122,6 +122,25 @@ body {
   margin-bottom: 2px;
 }
 
+.credits {
+  margin-top: 15px;
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+.grey-link {
+  color: var(--text-dim);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.grey-link:hover {
+  color: var(--text-color);
+}
+
+
 /* Monochrome Controls */
 .mono-select {
   background-color: var(--bg-color);
