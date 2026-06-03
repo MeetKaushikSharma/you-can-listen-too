@@ -21,6 +21,12 @@ It captures the system audio loopback in real time, downmixes multi-channel inpu
 
 ---
 
+## Installation Tutorial [>]
+
+Watch this [video tutorial](https://drive.google.com/file/d/1fvb9cVIUkvwGGgpChsVo7wluaeX0JIv5/view?usp=sharing) for step-by-step instructions on how to install the desktop app.
+
+---
+
 ## How to Use :)
 
 1. **Connect Headphones:** Connect all Bluetooth or USB headphones/earbuds to your PC.
